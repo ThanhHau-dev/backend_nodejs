@@ -1,0 +1,35 @@
+<h1 class="m-4">
+    Quản lý sản phẩm
+</h1>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-sm-1 fw-bold">STT</div>
+        <div class="col-sm-2 fw-bold">Tên sản phẩm</div>
+        <div class="col-sm-2 fw-bold">Giá sản phẩm</div>
+        <div class="col-sm-3 fw-bold">Mô tả sản phẩm</div>
+        <div class="col-sm-2 fw-bold">Thời gian tạo</div>
+    </div>
+    <hr>
+
+    {{#each courses}}
+    <div class="row">
+        <div class="col-sm-1">{{@index}}</div>
+        <div class="col-sm-2">{{this.name}}</div>
+        <div class="col-sm-2">{{this.price}}</div>
+        <div class="col-sm-3">{{this.description}}</div>
+        <div class="col-sm-2">{{this.createdAt}}</div>
+        <div class="col-sm-1">
+            <a href="courses/{{this._id}}/edit">
+                <button class="btn btn-warning">Sửa</button>
+            </a>
+        </div>
+        <div class="col-sm-1">
+            <button class="btn btn-danger">Xóa</button>
+        </div>
+    </div>
+    <hr>
+    {{/each}} 
+
+</div>
